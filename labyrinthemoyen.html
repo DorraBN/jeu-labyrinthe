@@ -1,0 +1,126 @@
+<html>
+  <HEAD>
+    <link rel="stylesheet" type="text/css" href="mazing.css">
+      </script>
+    <div id="maze_container">
+      <div id="maze" data-steps="???">
+      </div>
+      </div>
+      
+      <script src="mazing.js"></script>
+      <script>
+      
+        window.addEventListener("DOMContentLoaded", function(e) {
+          var maze = new Mazing("maze");
+      
+        }, false);
+      
+      </script>
+  
+<script>
+
+  var Maze, MazeGame;
+
+  const makeMaze = (id, width, height, speech = false) => {
+    Maze = new FancyMazeBuilder(width, height);
+    Maze.display(id);
+    MazeGame = new Mazing("maze");
+    if(speech) {
+      MazeGame.enableSpeech();
+    }
+  }
+
+  makeMaze("maze_container", 20, 18);
+
+</script>
+    </HEAD><div>
+  <h1 >jeu de labyrinthe</h1>
+  <h2>niveau moyen</h2>
+  <SCRIPT language="javascript"></SCRIPT>
+        
+            
+   ------------------------------       ___<h3>__________________          
+    <time><br>votre temps est:        
+           <br> 00:00:55</time><br>  
+    <button id="strt">start</button>
+    <button id="stp">stop</button>
+    <button id="rst">reset</button></div></h3>
+    <input type="checkbox" id="run">
+<div class="chrono">
+	<div class="circle"></div>
+	<div class="top-btn"></div>
+	<label for="run" class="btn"></label>
+	<div class="center"></div>
+	<div class="needle"></div>
+</div><br>
+    cliquer ici p
+          <div id="maze_container">
+            <div id="maze" data-steps="???">
+            <!-- insert the maze HTML code here -->
+            </div>
+            </div>
+            <div></div>
+            <script>var h1 = document.getElementsByTagName('h1')[0];
+              var start = document.getElementById('strt');
+              var stop = document.getElementById('stp');
+              var reset = document.getElementById('rst');
+              var sec = 55;
+              var min = 00;
+              var hrs = 0;
+              var t;
+              
+              function tick(){
+                  sec--;
+                  if (sec <=0) {
+                      sec = 59;
+                      min--;
+                      
+                      }
+                      
+                      
+                  if(sec==59 && min<=0){
+                    sec=00;
+                    min=00;
+                    
+                    
+                       
+                  }
+                }
+                if(sec==00 && min==00){ 
+                  alert("Vous avez echoué!")}
+                
+                  
+                  
+                  function add() {
+                      tick();
+                      h1.textContent = (hrs > 9 ? hrs : "0" + hrs) 
+                               + ":" + (min > 9 ? min : "0" + min)
+                                  + ":" + (sec > 9 ? sec : "0" + sec);
+                      timer();
+                  }
+                  function timer() {
+                  
+                      t = setTimeout(add, 1000);
+                    
+                  }
+                  
+                  timer();
+                  start.onclick = timer;
+                  stop.onclick = function() {
+                      clearTimeout(t);
+                       
+                  }
+                 
+                  reset.onclick = function() {
+                      h1.textContent = "00:00:55";
+                      seconds = 55; minutes = 0; hours = 00;
+                    }
+                      </script><br>
+                      <img src=" m.jpg" width="10%" height="10%"><br>
+                      cliquer ici sur chrono pour partir
+          <footer>
+            <a href="labyrinthemoyen.html">recommencer</a><br>
+            <a href="labyrinthedifficile.html">aller au niveau suivant</a><br>
+            <a href="labyrinthefacile.html">aller au niveau précedent</a>
+          </footer>
+    </html>

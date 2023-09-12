@@ -1,0 +1,53 @@
+<html>
+  <HEAD>
+    <link rel="stylesheet" type="text/css" href="labyfacile.css">
+      </script>
+    <div id="maze_container">
+      <div id="maze" data-steps="???">
+      </div>
+      </div>
+      
+      <script src="labyfacile.js"></script>
+      <script>
+      
+        window.addEventListener("DOMContentLoaded", function(e) {
+          var maze = new Mazing("maze");
+      
+        }, false);
+      
+      </script>
+  
+<script>
+
+  var Maze, MazeGame;
+
+  const makeMaze = (id, width, height, speech = false) => {
+    Maze = new FancyMazeBuilder(width, height);
+    Maze.display(id);
+    MazeGame = new Mazing("maze");
+    if(speech) {
+      MazeGame.enableSpeech();
+    }
+  }
+
+  makeMaze("maze_container", 25, 30);
+
+</script>
+    </HEAD><div>
+  <h1 >jeu de labyrinthe</h1>
+  <h2>niveau facile</h2>
+
+  <SCRIPT language="javascript"></SCRIPT>
+          <div id="maze_container">
+            <div id="maze" data-steps="???">
+            <!-- insert the maze HTML code here -->
+            </div>
+            </div>
+            <div></div>
+           
+          <footer>
+            <a href="labyrinthefacile.html">recommencer</a><br>
+            <a href="labyrinthemoyen.html">aller au niveau suivant</a><br>
+            <a href="labyrinth.html">aller au niveau précedent</a>
+          </footer>
+    </html>

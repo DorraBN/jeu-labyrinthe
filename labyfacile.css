@@ -1,0 +1,130 @@
+#maze_container {
+    position: relative;
+    display: inline-block;
+  }
+  #maze {
+    position: relative;
+    background-color: #c9ff05;
+    background-image: radial-gradient(circle at 0% 0%, transparent 50%, rgba(0,0,0,0.1) 50%), radial-gradient(circle at center, rgba(0,0,0,0.1) 50%, transparent 50%), radial-gradient(circle at 100% 100%, transparent 50%, rgba(0,0,0,0.1) 50%), radial-gradient(circle at 0% 100%, transparent 50%, rgba(0,0,0,0.1) 50%), radial-gradient(circle at 100% 0%, transparent 50%, rgba(0,0,0,0.1) 50%);
+    background-size: 8em 8em;
+  }
+  #maze div {
+    display: flex;
+  }
+  #maze div div {
+    position: relative;
+    width: 1em;
+    height: 1em;
+  }
+  #maze div div::after {
+    position: absolute;
+    left: -3px;
+    top: -4px;
+    text-align: center;
+    text-shadow: 0 0 px black;
+    font-size: 1em;
+    z-index: 10;
+  }
+  #maze div div.door.exit::after {
+    content: "\1F6A9";
+  }
+  #maze div.pierre:nth-of-type(13n)::after {
+    content: " \1FAA8";
+  }
+  #maze div.pt:nth-of-type(13n)::after {
+    content: "  \003F";
+  }
+  #maze div.bonus:nth-of-type(13n)::after {
+    content: "\1F381";
+  }#maze div.Time:nth-of-type(13n)::after
+   {
+    content: " \23F3";
+  }
+  #maze div.hero::after {
+    content: "\1F422" !important;
+  }
+  #maze.face-right div.hero::after {
+    transform: scale(-1, 1);
+  }
+  #maze div div.wall, #maze div div.nubbin.wall, #maze div div.door.exit {
+    background-color:black;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.2) 45%, transparent 55%), linear-gradient(to bottom, rgba(0,0,0,0.2) 45%, transparent 55%);
+    background-size: 1em 0em;
+  }
+  #maze div div.nubbin.wall::after {
+    content: " ";
+  }
+  #maze div div.sentinel.wall {
+    background: transparent;
+  }
+  #maze div div:nth-child(odd) {
+    width: 1em;
+  }
+  #maze div:nth-child(odd) div {
+    height: 1em;
+  }
+  
+  #maze.finished::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    content: "Game Over";
+    background: rgba(0,0,0,0.4);
+    text-transform: uppercase;
+    font-family: monospace;
+    font-size: 5em;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    color: #fff;
+    z-index: 10;
+  }
+  
+  #maze_output {
+    display: flex;
+    margin: 0.5em auto;
+  }
+  #maze_score, #maze_message {
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  #maze_score {
+    flex: 1;
+    white-space: nowrap;
+    text-align: left;
+  }
+  #maze_score::before {
+    content: "Score: ";
+  }
+  #maze_score.has-key::after {
+    content: "\00a0\1F511";
+  }
+  #maze_message {
+    flex: 3;
+    text-align: right;
+  }
+   
+  h1{
+    color: red;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    text-align: center;
+    margin-top: 0%;
+}
+h2{
+    color:brown;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia;
+}
+body{
+    background-color:beige;
+    text-align: center;
+}
+p {
+	justify-content: center;
+	align-items: center;
+}

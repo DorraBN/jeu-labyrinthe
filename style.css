@@ -1,0 +1,50 @@
+h1{
+    color: red;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    text-align: center;
+}
+h2{
+    color:brown;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia;
+}
+body{
+    background-color: beige;
+    text-align: center;
+}
+p {
+	justify-content: center;
+	align-items: center;
+}
+.chronometre{
+    margin: auto ;
+    width: 300px;
+    text-align: center;}
+
+.tim{
+    margin: auto;
+    width: 300px;
+    border: 1px solid rgba(0,0,0,0.5);
+    padding:5px 0;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: digital;
+    margin-bottom: 10px;
+
+
+}
+      footer{
+        max-width: 2700px;
+        margin:auto;
+        text-align: center;
+        background-color: #333;
+        color: white;
+        font-family: Arial, sans-serif;
+        border: 1px solid #ccc;
+        padding: 5px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+     
